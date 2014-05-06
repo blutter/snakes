@@ -1,30 +1,25 @@
 # For an explanation of the steroids.config properties, see the guide at
-# http://academy.appgyver.com/categories/9/contents/70
+# http://guides.appgyver.com/steroids/guides/project_configuration/config-application-coffee/
 
-steroids.config.name = "Steroids Tutorial"
+steroids.config.name = "snakes"
 
 # -- Initial Location --
 steroids.config.location = "http://localhost/index.html"
 
 # -- Tab Bar --
-steroids.config.tabBar.enabled = true
-steroids.config.tabBar.tabs = [
-  {
-    title: "Index"
-    icon: "icons/pill@2x.png"
-    location: "http://localhost/views/steroidsTutorial/index.html"
-  },
-  {
-    title: "Welcome"
-    icon: ""
-    location: "http://localhost/index.html"
-  },
-  {
-    title: "Internet"
-    icon: "icons/telescope@2x.png"
-    location: "http://www.google.com"
-  }
-]
+# steroids.config.tabBar.enabled = true
+# steroids.config.tabBar.tabs = [
+#   {
+#     title: "Index"
+#     icon: "icons/pill@2x.png"
+#     location: "http://localhost/index.html"
+#   },
+#   {
+#     title: "Internet"
+#     icon: "icons/telescope@2x.png"
+#     location: "http://www.google.com"
+#   }
+# ]
 
 # steroids.config.tabBar.tintColor = "#000000"
 # steroids.config.tabBar.tabTitleColor = "#00aeef"
@@ -42,7 +37,7 @@ steroids.config.navigationBar.buttonTintColor = "#ffffff"
 # steroids.config.navigationBar.portrait.backgroundImage = ""
 
 # -- Android Loading Screen
-# steroids.config.loadingScreen.tintColor = "#262626"
+steroids.config.loadingScreen.tintColor = "#262626"
 
 # -- iOS Status Bar --
 steroids.config.statusBar.enabled = true

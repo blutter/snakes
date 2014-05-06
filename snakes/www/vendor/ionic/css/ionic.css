@@ -94,9 +94,9 @@
 
 
 .ion-loading-a {
-  /*-webkit-animation-timing-function: steps(8, start);*/
-  /*-moz-animation-timing-function: steps(8, start);*/
-  /*animation-timing-function: steps(8, start); }*/
+  -webkit-animation-timing-function: steps(8, start);
+  -moz-animation-timing-function: steps(8, start);
+  animation-timing-function: steps(8, start); }
 
 
 
