@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "name": "First snake",
+    "name": "First snakes",
     "description": "This is awesome."
   },
   {
     "id": 2,
-    "name": "Second snake",
+    "name": "Second snakes",
     "description": "This is also okay."
   }
 ]
