@@ -1,9 +1,9 @@
-var snakeApp = angular.module('snakeApp', ['SnakeModel', 'ngTouch']);
+var snakesApp = angular.module('snakesApp', ['SnakeModel', 'ngTouch']);
 
 
 // Index: http://localhost/views/snakes/index.html
 
-snakeApp.controller('IndexCtrl', function ($scope, SnakeRestangular) {
+snakesApp.controller('IndexCtrl', function ($scope, SnakeRestangular) {
 
   // Helper function for opening new webviews
   $scope.open = function(id) {
@@ -25,7 +25,7 @@ snakeApp.controller('IndexCtrl', function ($scope, SnakeRestangular) {
 
 // Show: http://localhost/views/snakes/show.html?id=<id>
 
-snakeApp.controller('ShowCtrl', function ($scope, $filter, SnakeRestangular) {
+snakesApp.controller('ShowCtrl', function ($scope, $filter, SnakeRestangular) {
 
   // Fetch all objects from the local JSON (see app/models/snakes.js)
   SnakeRestangular.all('snake').getList().then( function(snakes) {

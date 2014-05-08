@@ -12,7 +12,7 @@
   "devDependencies": {
     "grunt-steroids": "0.x",
 		"karma-jasmine": "~0.2"
-  },
+	},
   "license": "none",
   "engines": {
     "steroids": "3.1.9"
