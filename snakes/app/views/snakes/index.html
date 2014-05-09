@@ -1,6 +1,6 @@
 <div ng-controller="IndexCtrl">
   <ul class="list">
-    <li class="item item-icon-right" ng-click="open(snake.id)" ng-repeat="snake in snakes">
+    <li class="item item-icon-right" ng-click="open(snake.id)" ng-repeat="snake in snakes | orderBy:'name'">
       Snake: {{ snake.name }}
       <i class="icon ion-ios7-arrow-right"></i>
     </li>

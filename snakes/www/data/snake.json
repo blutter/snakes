@@ -1,12 +1,44 @@
 [
   {
     "id": 1,
-    "name": "First snakes",
+    "name": "Cobra",
     "description": "This is awesome."
   },
   {
     "id": 2,
-    "name": "Second snakes",
+    "name": "Anaconda",
     "description": "This is also okay."
+  },
+	{
+    "id": 3,
+    "name": "Asp"
+  },
+	{
+    "id": 4,
+    "name": "Adder"
+  },
+	{
+    "id": 5,
+    "name": "Gecko"
+  },
+	{
+    "id": 6,
+    "name": "Python"
+  },
+	{
+    "id": 7,
+    "name": "Rattlesnake"
+  },
+	{
+    "id": 8,
+    "name": "Boa"
+  },
+	{
+    "id": 9,
+    "name": "Tiger"
+  },
+	{
+    "id": 10,
+    "name": "Viper"
   }
 ]

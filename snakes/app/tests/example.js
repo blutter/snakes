@@ -6,7 +6,7 @@ describe("Example test", function() {
 		expect(true).toBe(true);
 	});
 
-	it("basic test 2", function() {
+	xit("basic test 2", function() {
 		expect(true).toBe(false);
 	});
 });

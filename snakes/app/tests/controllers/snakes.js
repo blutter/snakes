@@ -11,7 +11,10 @@ describe('Snakes Controller', function () {
 		backend.expect('GET', 'http://localhost/data/snake.json').respond(
 			[
 				{'id':1, 'name':'snake1'},
-				{'id':2, 'name':'snake2'}
+				{'id':2, 'name':'snake2'},
+				{'id':3, 'name':'boa'},
+				{'id':4, 'name':'asp'},
+				{'id':5, 'name':'cobra'}
 			]
 		);
 	}));
@@ -23,9 +26,9 @@ describe('Snakes Controller', function () {
 		backend.flush();
 	}));
 
-	describe('On creation the snakes should not be empty', function () {
+	describe('As a user, I want to be able to view a list of known snakes', function () {
 		it('the snakes data should be available', function() {
-			expect($scope.snakes.length).toBeGreaterThan(0);
+			expect($scope.snakes.length).toEqual(5);
 		});
 	});
 
@@ -39,7 +42,7 @@ describe('MyTestCtrl', function () {
 	}));
 
 	describe('Tests', function () {
-		it('should hane a message', function () {
+		it('should have a message', function () {
 			expect(appCtrl.message).toBe('Hello');
 		});
 	});
