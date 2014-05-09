@@ -20,6 +20,7 @@ module.exports = function(config) {
 			"www/components/restangular/dist/restangular.js",
 			"www/components/underscore/underscore.js",
 			"www/components/angular-touch/angular-touch.js",
+			"www/components/steroids-js/steroids.js",
 			"app/**/*.js",
       "app/tests/example.js", "app/tests/services/snakes.js"
     ],

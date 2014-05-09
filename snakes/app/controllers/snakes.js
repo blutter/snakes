@@ -19,7 +19,6 @@ snakesApp.controller('IndexCtrl', function ($scope, SnakeRestangular) {
   // Native navigation
   steroids.view.navigationBar.show("Snake index");
   steroids.view.setBackgroundColor("#FFFFFF");
-
 });
 
 
@@ -37,4 +36,8 @@ snakesApp.controller('ShowCtrl', function ($scope, $filter, SnakeRestangular) {
   steroids.view.navigationBar.show("Snake: " + steroids.view.params.id );
   steroids.view.setBackgroundColor("#FFFFFF");
 
+});
+
+snakesApp.controller('MyTestCtrl', function() {
+	this.message = 'Hello';
 });

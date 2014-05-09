@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="snakesApp">
 <head>
   <meta charset="utf8">
   <meta name="viewport" content="width=device-width">
@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/vendor/ionic/css/ionic.css" />
   <link rel="stylesheet" href="/stylesheets/application.css" />
 
+  <script src="/components/angular/angular.js"></script>
   <script src="/javascripts/onerror.js"></script>
   <script src="/javascripts/console.log.js"></script>
 
@@ -16,28 +17,17 @@
   <script src="/components/steroids-js/steroids.js"></script>
 
   <script src="/javascripts/application.js"></script>
+  <script src="/controllers/snakes.js"></script>
+  <script src="/models/snakes.js"></script>
+  <script src="/components/restangular/dist/restangular.js"></script>
+  <script src="/components/underscore/underscore.js"></script>
+  <script src="/components/angular-touch/angular-touch.js"></script>
 </head>
 <body class="content">
-  <div class="padding">
-    <h1>Welcome to Steroids!</h1>
-
-    <p>Awesome! This file is located at <strong>www/index.html</strong> &mdash; open it, change some text, save the file, and press enter in the Terminal window running <strong>$ steroids connect</strong>. The changes are updated to all connected devices. Cool, ain't it?</p>
-
-    <h2>Using AppGyver Scanner</h2>
-
-    <p>On iOS, to restart your current app or scan another app, <strong>tap and hold on the screen with three fingers.</strong>. This opens the Scanner context menu.</p>
-
-    <p>On Android, press the native back button to return to the device desktop. Open the Scanner again to scan another app or re-open your previous app.</p>
-
-    <h2>Start the tutorial</h2>
-
-    <p>Let's spend a few minutes on a short tutorial. Go to your Steroids project directory and run the command:</p>
-
-    <p><code>$ steroids generate tutorial begin</code></p>
-
-    <h2>Get in touch with us!</h2>
-
-    <p>Feel free to contact us at <a href="mailto:contact@appgyver.com">contact@appgyver.com</a>, we would love to get your feedback!</p>
-  </div>
+    <div ng-controller="IndexCtrl">
+        <ul>
+            <li ng-repeat="snake in snakes">{{snake.name}}</li>
+        </ul>
+    </div>
 </body>
 </html>
