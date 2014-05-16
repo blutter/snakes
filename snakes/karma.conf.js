@@ -21,6 +21,11 @@ module.exports = function(config) {
 			"www/components/underscore/underscore.js",
 			"www/components/angular-touch/angular-touch.js",
 			"www/components/steroids-js/steroids.js",
+			"www/components/ionic/js/ionic.js",
+			"www/components/ionic/js/ionic-angular.js",
+			"www/components/angular-animate/angular-animate.js",
+			"www/components/angular-sanitize/angular-sanitize.js",
+			"www/components/angular-ui-router/release/angular-ui-router.js",
 			"app/**/*.js",
       "app/tests/example.js", "app/tests/services/snakes.js"
     ],
