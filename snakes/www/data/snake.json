@@ -2,7 +2,8 @@
   {
     "id": 1,
     "name": "Cobra",
-    "description": "This is awesome."
+    "description": "This is awesome.",
+		"imagePath": "1.jpg"
   },
   {
     "id": 2,

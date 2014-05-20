@@ -12,7 +12,7 @@ snakesApp.controller('IndexCtrl', function ($scope, SnakeRestangular) {
   };
 
   // Fetch all objects from the local JSON (see app/models/snakes.js)
-  SnakeRestangular.all('snake').getList().then( function(snakes) {
+  SnakeRestangular.all('getnextpage').one('0').getList().then( function(snakes) {
     $scope.snakes = snakes;
   });
 
@@ -20,7 +20,7 @@ snakesApp.controller('IndexCtrl', function ($scope, SnakeRestangular) {
 	//$scope.snakes = [{'id':1, 'name':'snake1'},{'id':2, 'name':'snake2'},{'id':3, 'name':'boa'},{'id':4, 'name':'asp'},{'id':5, 'name':'cobra'}];
 
 	$scope.doRefresh = function() {
-		SnakeRestangular.all('snake').getList().then( function(snakes) {
+		SnakeRestangular.all('get').getList().then( function(snakes) {
 			$scope.snakes = snakes;
 			$scope.$broadcast('scroll.refreshComplete');
 		});
@@ -37,7 +37,7 @@ snakesApp.controller('IndexCtrl', function ($scope, SnakeRestangular) {
 snakesApp.controller('ShowCtrl', function ($scope, $filter, SnakeRestangular) {
 
   // Fetch all objects from the local JSON (see app/models/snakes.js)
-  SnakeRestangular.all('snake').getList().then( function(snakes) {
+  SnakeRestangular.all('get').one(steroids.view.params['id']).get().then( function(snakes) {
     // Then select the one gbased on the view's id query parameter
     $scope.snake = $filter('filter')(snakes, {id: steroids.view.params['id']})[0];
   });
