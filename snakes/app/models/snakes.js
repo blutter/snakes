@@ -15,7 +15,6 @@ module.factory('SnakeRestangular', function(Restangular) {
   return Restangular.withConfig(function(RestangularConfigurer) {
 
     RestangularConfigurer.setBaseUrl('http://10.10.254.68/snakes/snakes');
-//    RestangularConfigurer.setRequestSuffix('.json');
     RestangularConfigurer.setRestangularFields({
       id: "snake_id"
     });
