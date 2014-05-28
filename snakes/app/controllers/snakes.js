@@ -39,7 +39,15 @@ snakesApp.controller('ShowCtrl', function ($scope, $filter, SnakeRestangular) {
   // Fetch all objects from the local JSON (see app/models/snakes.js)
   SnakeRestangular.all('get').one(steroids.view.params['id']).get().then( function(snakes) {
     // Then select the one gbased on the view's id query parameter
-    $scope.snake = $filter('filter')(snakes, {id: steroids.view.params['id']})[0];
+    $scope.snake = {
+			id: snakes.Id,
+			name: snakes.name,
+			genus: snakes.genus,
+			species: snakes.species,
+			venomous: snakes.venomous,
+			description: snakes.description,
+			imageFile: snakes.imageFile
+		};
   });
 
   // Native navigation
