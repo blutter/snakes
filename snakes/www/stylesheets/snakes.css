@@ -1,0 +1,10 @@
+.index-img {
+	height: 25px;
+	width: 25px;
+}
+
+.details-img {
+	height: auto;
+	width:auto;
+	max-width: 100%;
+}

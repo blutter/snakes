@@ -4,11 +4,7 @@
 	</ion-refresher>
   <ion-list>
     <ion-item ng-click="open(snake.Id)" ng-repeat="snake in snakes | orderBy:'name'">
-      Snake: {{ snake.name }}
+      <img class="index-img" ng-src="http://10.10.254.68:9999/databases/snakes/static/images/{{snake.imageFile}}"> {{ snake.name }}
     </ion-item>
-    <!--<ion-item class="item-icon-right" ng-click="open(snake.id)" ng-repeat="snake in snakes | orderBy:'name'">-->
-      <!--Snake: {{ snake.name }}-->
-      <!--<i class="icon ion-ios7-arrow-right"></i>-->
-    <!--</ion-item>-->
   </ion-list>
 </ion-content>
