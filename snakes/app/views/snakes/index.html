@@ -1,10 +1,19 @@
-<ion-content ng-controller="IndexCtrl">
-	<ion-refresher pulling-text="Pull to refresh..."
-		on-refresh="doRefresh()">
-	</ion-refresher>
-  <ion-list>
-    <ion-item ng-click="open(snake.Id)" ng-repeat="snake in snakes | orderBy:'name'">
-			<snake-index-row snake="snake"/>
-    </ion-item>
-  </ion-list>
-</ion-content>
+<div ng-controller="IndexCtrl">
+	<ion-content>
+		<ion-refresher pulling-text="Pull to refresh..."
+			on-refresh="doRefresh()">
+		</ion-refresher>
+		<ion-list>
+			<ion-item ng-click="open(snake.Id)" ng-repeat="snake in snakes | orderBy:'name'">
+				<snake-index-row snake="snake"/>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+
+	<div class="bar bar-footer bar-balanced">
+		<div ng-click="add()">
+			<i class="icon ion-plus-circled"></i>
+			<div class="title">Add snake</div>
+		</div>
+	</div>
+</div>

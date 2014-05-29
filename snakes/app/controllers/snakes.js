@@ -11,6 +11,11 @@ snakesApp.controller('IndexCtrl', function ($scope, SnakeRestangular) {
     steroids.layers.push(webView);
   };
 
+	$scope.add = function() {
+		webView = new steroids.views.WebView("/views/snakes/add.html");
+		steroids.layers.push(webView);
+	};
+
   // Fetch all objects from the local JSON (see app/models/snakes.js)
   SnakeRestangular.all('getnextpage').one('0').getList().then( function(snakes) {
     $scope.snakes = snakes;
