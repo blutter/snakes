@@ -3,7 +3,10 @@
 angular.module('snakesApp').directive('snakeIndexRow', function() {
 	return {
 		restrict: 'E',
-		templateUrl: '/views/templates/snakeIndexRow.html'
+		templateUrl: '/views/templates/snakeIndexRow.html',
+		scope: {
+			snake: "="
+		}
 	};
 
 });
