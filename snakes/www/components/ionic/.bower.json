@@ -1,7 +1,7 @@
 {
   "name": "ionic",
-  "version": "1.0.0-beta.5-nightly-2110",
-  "codename": "barium-bobcat",
+  "version": "1.0.0-beta.6",
+  "codename": "darmstadtium-dingo",
   "homepage": "https://github.com/driftyco/ionic",
   "authors": [
     "Max Lynch <max@drifty.com>",
@@ -34,13 +34,14 @@
     "angular-sanitize": "~1.2.12",
     "angular-ui-router": "0.2.10"
   },
-  "_release": "1.0.0-beta.5-nightly-2110",
+  "_release": "1.0.0-beta.6",
   "_resolution": {
     "type": "version",
-    "tag": "v1.0.0-beta.5-nightly-2110",
-    "commit": "9bcb09df87cab0a01386cfd9ad0218486d2086a5"
+    "tag": "v1.0.0-beta.6",
+    "commit": "f98803458a04ea79b90052b072a45c3b1deb2596"
   },
   "_source": "https://github.com/driftyco/ionic-bower.git",
-  "_target": "v1.0.0-beta.5-nightly-2110",
-  "_originalSource": "https://github.com/driftyco/ionic-bower.git"
+  "_target": "v1.0.0-beta.6",
+  "_originalSource": "https://github.com/driftyco/ionic-bower.git",
+  "_direct": true
 }
