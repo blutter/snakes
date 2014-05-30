@@ -11,10 +11,7 @@ snakesApp.controller('AddSnakesCtrl', function ($scope, SnakeRestangular) {
 
 
 	$scope.save = function() {
-		console.log('name ' + $scope.snake.name);
-		console.log('genus ' + $scope.snake.genus);
-		console.log('species ' + $scope.snake.species);
-		console.log('venomous ' + $scope.snake.venomous);
+		console.log($scope.snake);
 
 		SnakeRestangular.all('api/snakes').post($scope.snake);
 
