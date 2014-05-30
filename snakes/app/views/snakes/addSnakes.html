@@ -1,0 +1,29 @@
+<div ng-controller="AddSnakesCtrl" class="padding">
+	<div class="list">
+		<label class="item item-input">
+			<span class="input-label">Name</span>
+			<input type="text" ng-model="snake.name">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">Genus</span>
+			<input type="text" ng-model="snake.genus">
+		</label>
+		<label class="item item-input">
+			<span class="input-label">Species</span>
+			<input type="text" ng-model="snake.species">
+		</label>
+		<label class="item item-checkbox">
+			<label class="checkbox">
+				<input type="checkbox" ng-model="snake.venomous">
+			</label>
+			Venomous
+		</label>
+	</div>
+
+	<div class="bar bar-footer bar-balanced">
+		<div ng-click="save(snake)">
+			<i class="icon ion-ios7-download"></i>
+			<div class="title">Save snake</div>
+		</div>
+	</div>
+</div>

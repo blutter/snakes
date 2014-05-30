@@ -12,12 +12,12 @@ snakesApp.controller('IndexCtrl', function ($scope, SnakeRestangular) {
   };
 
 	$scope.add = function() {
-		webView = new steroids.views.WebView("/views/snakes/add.html");
+		webView = new steroids.views.WebView("/views/snakes/addSnakes.html");
 		steroids.layers.push(webView);
 	};
 
   // Fetch all objects from the local JSON (see app/models/snakes.js)
-  SnakeRestangular.all('getnextpage').one('0').getList().then( function(snakes) {
+  SnakeRestangular.all('snakes/getnextpage').one('0').getList().then( function(snakes) {
     $scope.snakes = snakes;
   });
 
@@ -25,7 +25,7 @@ snakesApp.controller('IndexCtrl', function ($scope, SnakeRestangular) {
 	//$scope.snakes = [{'id':1, 'name':'snake1'},{'id':2, 'name':'snake2'},{'id':3, 'name':'boa'},{'id':4, 'name':'asp'},{'id':5, 'name':'cobra'}];
 
 	$scope.doRefresh = function() {
-		SnakeRestangular.all('get').getList().then( function(snakes) {
+		SnakeRestangular.all('snakes/get').getList().then( function(snakes) {
 			$scope.snakes = snakes;
 			$scope.$broadcast('scroll.refreshComplete');
 		});
@@ -42,7 +42,7 @@ snakesApp.controller('IndexCtrl', function ($scope, SnakeRestangular) {
 snakesApp.controller('ShowCtrl', function ($scope, $filter, SnakeRestangular) {
 
   // Fetch all objects from the local JSON (see app/models/snakes.js)
-  SnakeRestangular.all('get').one(steroids.view.params['id']).get().then( function(snakes) {
+  SnakeRestangular.all('snakes/get').one(steroids.view.params['id']).get().then( function(snakes) {
     // Then select the one gbased on the view's id query parameter
     $scope.snake = {
 			id: snakes.Id,
@@ -56,7 +56,7 @@ snakesApp.controller('ShowCtrl', function ($scope, $filter, SnakeRestangular) {
   });
 
   // Native navigation
-  steroids.view.navigationBar.show("Snake: " + steroids.view.params.id );
+  steroids.view.navigationBar.show("Snake Details " + steroids.view.params.id );
   steroids.view.setBackgroundColor("#FFFFFF");
 
 });
