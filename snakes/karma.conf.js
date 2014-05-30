@@ -26,8 +26,10 @@ module.exports = function(config) {
 			"www/components/angular-animate/angular-animate.js",
 			"www/components/angular-sanitize/angular-sanitize.js",
 			"www/components/angular-ui-router/release/angular-ui-router.js",
+			"app/controllers/snakes.js",
 			"app/**/*.js",
-      "app/tests/example.js", "app/tests/services/snakes.js"
+      "app/tests/example.js", "app/tests/services/snakes.js",
+			"views/snakes/templates/*.html"
     ],
 
 
@@ -40,7 +42,8 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-    	'app/controllers/*.js' : ['coverage']
+    	'app/controllers/*.js' : ['coverage'],
+			'**/*.html' : ['ng-html2js']
     },
 
 

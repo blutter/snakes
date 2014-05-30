@@ -8,7 +8,7 @@ describe('Snakes Controller', function () {
 
 	beforeEach(inject(function($httpBackend) {
 		backend = $httpBackend;
-		backend.expect('GET', 'http://localhost/data/snake.json').respond(
+		backend.expect('GET', 'http://10.10.254.68/snakes/snakes/getnextpage/0').respond(
 			[
 				{'id':1, 'name':'snake1'},
 				{'id':2, 'name':'snake2'},
@@ -17,6 +17,7 @@ describe('Snakes Controller', function () {
 				{'id':5, 'name':'cobra'}
 			]
 		);
+
 	}));
 
 	beforeEach(inject(function($rootScope, $controller, SnakeRestangular) {
